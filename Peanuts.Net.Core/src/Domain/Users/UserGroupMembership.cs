@@ -47,6 +47,16 @@ namespace Com.QueoFlow.Peanuts.Net.Core.Domain.Users {
         }
 
         /// <summary>
+        /// Ruft alle Mitgliedschafts-Typen ab, die ein Mitglied als in der Gruppe verfügbar markieren.
+        /// Alle verfügbaren Nutzer können zum Beispiel explizit zu einem Peanut eingeladen werden oder eine Rechnung erhalten.
+        /// </summary>
+        public static UserGroupMembershipType[] AvailableTypes {
+            get {
+                return new[] { UserGroupMembershipType.Administrator, UserGroupMembershipType.Member, UserGroupMembershipType.Guest };
+            }
+        }
+
+        /// <summary>
         /// Ruft alle Mitgliedschafts-Typen ab. 
         /// </summary>
         public static UserGroupMembershipType[] AllTypes {
@@ -60,7 +70,7 @@ namespace Com.QueoFlow.Peanuts.Net.Core.Domain.Users {
         ///     Mitgliedschaft als inaktiv gilt.
         /// </summary>
         public static UserGroupMembershipType[] InactiveTypes {
-            get { return new[] { UserGroupMembershipType.Inactive, UserGroupMembershipType.Quit, UserGroupMembershipType.Guest }; }
+            get { return new[] { UserGroupMembershipType.Inactive, UserGroupMembershipType.Guest }; }
         }
 
         /// <summary>
